@@ -1,0 +1,289 @@
+body{
+  background-color: rgb(250, 249, 245);
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* EN-TETE */
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 98rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+.nav-list{
+  position: relative;
+  display: flex;
+  list-style: none;
+}
+.nav-list a:hover{
+  cursor: pointer;
+  color:white;
+  background-color: #32947c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-item{
+  min-width: 7rem;
+  text-align: center;
+  padding-block: 12px;
+}
+
+.nav-link{
+  text-transform: uppercase;
+}
+
+.nav-link img{
+  height: 6rem;
+  margin-top: 4px;
+}
+/* le lien dans l'image du menu */
+a:hover {
+  cursor: pointer;
+  color:white;
+  border-radius: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: auto;
+}
+/* la underline du menu accueil expertises etc */
+.active{
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  width: 7rem;
+  background-color: #32947c;
+  transition: transform 0.25s;
+}
+
+/* La distance que le underline doit faire entre chaque decalage pour passer d'un mot à l'autre. 
+
+Pour passer du "ACCUEIL" à "PRIX" il a 7rem de distance a faire ! */
+.nav-item:nth-child(2):hover ~ .active{
+  transform: translateX(7rem);
+}
+
+.nav-item:nth-child(3):hover ~ .active{
+  transform: translateX(14rem);
+}
+.nav-item:nth-child(4):hover ~ .active{
+  transform: translateX(21rem);
+}
+
+.nav-item:nth-child(5):hover ~ .active{
+  transform: translateX(28rem);
+}
+
+/* _________________________________________ */
+
+.section1{
+  width: 100%;
+  height: 500px;
+  overflow: hidden; 
+}
+
+.section1 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 60px;
+}
+
+/* div qui prend tout ! contactez-moi + formulaire */ 
+.contact-formu{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 450px;
+}
+
+/* contactez-moi */
+h2{
+  font-family: 'Roboto';
+  color: rgb(112, 95, 87);
+  margin: 4rem auto;
+  width: 36%;
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: 2px solid #32947c;
+}
+
+.contact-moi{
+  width: 50%;
+}
+
+
+.containerr {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-bloc {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(233,243,239);
+  margin: 1rem auto;
+  border-bottom: 10px solid #32947c;
+  line-height: 25px;
+}
+
+
+.contact-bloc a:hover{
+  color: #32947c;
+}
+
+/* num mail */ 
+.contact-bloc i {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+/* fb twitter insta */ 
+.logos{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+/* FORMULAIRE */
+
+.formulaire{
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: auto;
+  height: 350px;
+}
+
+
+label {
+  margin-top: 12px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+input,textarea {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #32947c;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  width: 50%;
+  margin: 5px auto;
+}
+
+input[type="submit"]:hover {
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 0px 6px 2px black;; 
+}
+
+
+
+
+
+
+/* FOOTER */ 
+
+/* TITRE CONTACTEZ-MOI */ 
+.contactez-moi{
+  position: relative;
+  z-index: -1;
+  top: 8rem;
+  width: 27%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 41px;
+  color: rgb(112, 95, 87);
+  border-bottom: 1px solid #32947c;
+  left: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 213px;
+}
+
+/* Developpe ton site */
+.footer h4 {
+  color: #f2f2f2;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.footer ul {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  text-align: center;
+}
+  
+.footer li {
+  margin-top: 8px;
+}
+.footer a {
+  color: #f2f2f2;
+  transition: color 0.4s;
+}
+.footer a:hover {
+  color: #32947c;
+}
